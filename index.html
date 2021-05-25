@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid - 19</title>
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    
+    crossorigin="anonymous">
+
+        <!----------------------------------------------->
+        <title>Slider CSS - A Slider only with CSS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet" type="text/css" />
+        <!------------------------------->
+    <!------------------------------------------------   CARRUSEL  ------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
+        
+        $(document).ready(function() {
+            var numImages = 12;
+            if (numImages <= 6) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+        
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 6;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            });
+        
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 6) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            }); 
+        });
+    </script>
+
+<!---------------------------------------------------------------------------------------------->
+
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+    <header>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="img/logo utp.png" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                    <a href="#" id="enlace-infoCovid" class="btn-header">Covid-19</a>
+                    <a href="#" id="enlace-information" class="btn-header">Información económica</a>
+                    <a href="#" id="enlace-covid" class="btn-header">Expanción del covid-19</a>
+                    <a href="#" id="enlace-servicio" class="btn-header">Videos</a>
+                    <a href="#" id="enlace-trabajo" class="btn-header">Situación Actual</a>
+                    <a href="#" id="enlace-contacto" class="btn-header">Noticias COVID-19</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <div class="textos">
+            <h1>¡¡¡ALERTA MUNDIAL!!!</h1>
+            <h1>Covid - 19</h1>
+            <h2>La COVID-19 es la enfermedad causada por el nuevo coronavirus 
+                conocido como SARS-CoV-2. La OMS tuvo noticia por primera vez de 
+                la existencia de este nuevo virus el 31 de diciembre de 2019, al 
+                ser informada de un grupo de casos de «neumonía vírica» que se habían 
+                declarado en Wuhan (República Popular China).
+            </h2>
+        </div>
+    </header>
+    
+    <main>
+        <!-----------------------INFORMACIÓN BÁSICA DEL COVID - 19 ---------------------->
+        <section class="work contenedor" id="infoCovid">
+            <h3>COVID - 19</h3>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='sintomas'>Síntomas</li>
+                    <li class="filter" data-nombre='prevencion'>Prevención</li>
+                    <li class="filter" data-nombre='tratamiento'>Tratamiento</li>
+                </ul>
+            </div>
+            <div class="galeria-work">
+                <div class="cont-work sintomas">
+                    <h4>La mayoría de las personas que enferman de ‎COVID 19 experimentan síntomas 
+                        de leves a ‎moderados y se recuperan sin tratamiento ‎especial. ‎</h4>
+                    <div class="contenedor-servicio">
+                        <div class="checklist-servicio">
+                            <div class="service">
+                                <h4 class="n-service"><span class="number">1</span>Los síntomas más habituales</h4>
+                                <img src="img/Team meeting_Monochromatic.svg" alt="">
+                                <h4>- Fiebre</h4>
+                                <img src="img/fiebre.gif" alt="">
+                                <h4>- Tos seca</h4>
+                                <img src="img/tos.gif" alt="">
+                                <h4>- Cansancio</h4>
+                                <img src="img/cansancio.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="checklist-servicio">
+                            <div class="service">
+                                <h4 class="n-service"><span class="number">2</span>Otros síntomas menos comunes</h4>
+                                <h4>- Molestias y dolores</h4>
+                                <img src="img/molestias.gif" alt="">
+                                <h4>- Dolor de garganta</h4>
+                                <img src="img/garganta.gif" alt="">
+                                <h4>- Diarrea</h4>
+                                <img src="img/diarrea.gif" alt="">
+                                <h4>- Conjuntivitis</h4>
+                                <img src="img/conuntivitis.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="checklist-servicio">
+                            <div class="service">
+                                <h4 class="n-service"><span class="number">2</span>Otros síntomas menos comunes</h4>
+                                <h4>- Dolor de cabeza</h4>
+                                <img src="img/dolor de cabeza.gif" alt="">
+                                <h4>- Pèrdida de olfato o gusto</h4>
+                                <img src="img/olfato.gif" alt="">
+                                <h4>- Erupciones cutàneas</h4>
+                                <img src="img/erupcion.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-work prevencion">
+                    <h4>Toma las precauciones adecuadas e infórmate bien para protegerte y cuidar de quienes te rodean.</h4>
+                    <div class="contenedor-servicio">
+                        <img src="img/prevenciòn.gif" alt="">
+                        <div class="checklist-servicio1">
+                            <div class="service">
+                                <h4 class="n-service"><span class="number">1</span>Para evitar la propagación de la COVID-19:</h4>
+                                <h4>- Lávate las manos con frecuencia. Usa agua y jabón o un desinfectante de manos a base de alcohol.</h4>
+                                <h4>- Mantén una distancia de seguridad con personas que tosan o estornuden</h4>
+                                <h4>- Utiliza mascarilla cuando no sea posible mantener el distanciamiento físico.</h4>
+                                <h4>- No te toques los ojos, la nariz ni la boca.</h4>
+                                <h4>- Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un pañuelo.</h4>
+                                <h4>- Si no te encuentras bien, quédate en casa.</h4>
+                                <h4>- En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica</h4>
+                            </div>
+                        </div>
+                        <img src="img/masca2.gif" alt="">
+                        <div class="checklist-servicio1">
+                            <div class="service">
+                                <h4 class="n-service"><span class="number">2</span>Mascarillas</h4>
+                                <h4>Las mascarillas pueden ayudar a prevenir que las personas que las llevan 
+                                    propaguen el virus y lo contagien a otras personas. Sin embargo, no protegen 
+                                    frente a la COVID-19 por sí solas, sino que deben combinarse con el distanciamiento 
+                                    físico y la higiene de manos. Sigue las recomendaciones de los organismos de salud 
+                                    pública de tu zona.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-work tratamiento">
+                    <h4>Tratamientos contra el Covid - 19</h4>
+                    <div class="contenedor-servicio">
+                        <div class="checklist-servicio2">
+                            <div class="service">
+                                <h4 class="n-service"></span> ************* Cuidado Personal ***************</h4>
+                                <h4 class="n-service"><span class="number">1</span>Llama por teléfono a tu proveedor de servicios sanitarios o a una línea de atención sobre la COVID-19 para que te indiquen dónde y cuándo puedes hacerte una prueba.</h4>
+                                <h4 class="n-service"><span class="number">2</span>Durante el periodo de cuarentena, no vayas al trabajo, a clase ni a lugares públicos. Si necesitas algo de fuera, pide a alguien que te lo lleve.</h4>
+                                <h4 class="n-service"><span class="number">3</span>Usa la mascarilla para no contagiar a los demás. También debes llevarla puesta si necesitas acudir a un centro médico.</h4>
+                                <h4 class="n-service"><span class="number">4</span>Quédate en una habitación aislada del resto de los miembros de tu familia y, si no es posible, lleva puesta la mascarilla.</h4>
+                                <h4 class="n-service"><span class="number">5</span>Si compartes el dormitorio con otras personas, debe haber una separación de al menos 1 metro entre las camas.</h4>
+                                <h4 class="n-service"><span class="number">6</span>Controla tus síntomas durante 14 días.</h4>   
+                            </div>
+                            <img src="img/cuidado personal.png" alt="">
+                        </div>
+                        <div class="checklist-servicio2">
+                            <div class="service">
+                                <h4 class="n-service"></span>************* Tratamiento médico ***************</h4>
+                                <h4 class="n-service"></span>Científicos de todo el mundo están trabajando en la búsqueda y el desarrollo de tratamientos para combatir la COVID-19.</h4>
+                                <h4 class="n-service"><span class="number">1</span>Para proporcionar unos cuidados óptimos, se necesita oxígeno para los pacientes que se encuentran más graves y aquellos que corren el riesgo de desarrollar una enfermedad severa. En el caso de los pacientes críticos, se requieren métodos de asistencia respiratoria más avanzados, como respiradores.</h4>
+                                <h4 class="n-service"><span class="number">2</span>La dexametasona es un corticoide que contribuye a reducir el tiempo que los pacientes están conectados a un respirador y que puede salvar la vida de los que se encuentran en estado grave y crítico.</h4>
+                                <h4 class="n-service"></span>La Organización Mundial de la Salud desaconseja la automedicación de cualquier tipo, incluido el uso de antibióticos, para prevenir o curar la COVID-19.</h4>
+                            </div>
+                            <img src="img/tratamiento.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----------------------CARRUSEL COLORADO---------------------->
+        <!-----------------------COMPLETO EN PRIMER SLIDER IMPACTO ECONÒMICO----------------------> 
+        <section class="team contenedor" id="information">
+            <h3>INFORMACIÓN ECONÓMICA</h3>
+            <p class="after"> </p>                   
+            <div id="page">
+                <section>
+                    <input type="radio" name="slider-select-element" id="element1" checked="checked" />
+                    <input type="radio" name="slider-select-element" id="element2" />
+                    <input type="radio" name="slider-select-element" id="element3" />
+                    
+                    <div id="slider-container">
+                        <div id="slider-box">
+                            <div class="slider-element">
+                                <article class="element-red">
+                                    <div class="texto-team1">
+                                        <h4>IMPACTO ECONÓMICO DEL COVID-19 A NIVEL MUNDIAL</h4>
+                                    </div>
+                                    <div class="card">
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/img1.png" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>Impacto del covid en lo mercados bursátiles</h4>
+                                                <p>Índices bursátiles como el FTSE, el Dow Jones Industrial Average y 
+                                                    el Nikkei, experimentaron grandes caídas a medida que crecía el 
+                                                    número de casos de covid-19 en los primeros meses de la crisis.
+                                                </p>
+                                                <p>MÁS INFORMACIÓN EN:</p>
+                                            </div>
+                                            <div class="texto-team1">
+                                                <a href="https://www.bbc.com/mundo/noticias-55802814" class="btn-header">https://www.bbc.com/mundo/noticias-55802814</a>
+                                            </div>
+                                        </div>
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/impacto economico.gif" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>La COVID-19 (coronavirus) hunde a la economía mundial en la 
+                                                    peor recesión desde la Segunda Guerra Mundial
+                                                </h4>
+                                                <p> La economía mundial, que, según las previsiones del Banco Mundial, 
+                                                    se reducirá un 5,2 % este año.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/impacto económico 2.gif" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>El gráfico que explica cómo afecta el coronavirus a la economía mundial 
+                                                    y la reacción de los gobiernos para mitigar su impacto
+                                                </h4>
+                                                <p>Los países han estado anunciando medidas drásticas para mitigar 
+                                                    los efectos que la pandemia provocará a corto y mediano plazo.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="slider-element">
+                                <article class="element-green">
+                                    <div class="texto-team1">
+                                        <h4>IMPACTO ECONÓMICO EN EL PERÚ</h4>
+                                    </div>
+                                    <div class="card">
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/billetes-2.gif" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>La economía peruana cerrará este año con una brutal caída cercana al 13%, 
+                                                    pero en el 2021 crecería alrededor de 9%, según las últimas proyecciones 
+                                                    de la Cepal.</h4>
+                                                <h4>Economía peruana experimentará el mayor “efecto rebote” en América Latina en el 2021
+                                                </h4>
+                                                <p>Obtenido de:</p>
+                                                <a href="https://www.who.int/publications/m/item/weekly-epidemiological-update---5-january-2021" class="btn-header">https://gestion.pe/economia/economia-peruana-experimentara-el-mayor-efecto-rebote-en-america-latina-en-el-2021-noticia/?ref=gesr</a>
+                                            </div>
+                                        </div>
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/PERU2.jpg" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>Moody’s: Perú alcanzará el mayor crecimiento económico de la región el 2021</h4>
+                                                <p>Calificadora proyecta un escenario favorable por las altas cotizaciones del oro 
+                                                    y el cobre y por la continuidad de los grandes proyectos.
+                                                </p>
+                                                <p>MÁS INFORMACIÓN EN:</p>
+                                                <a href="https://elperuano.pe/noticia/103992-moodys-peru-alcanzara-el-mayor-crecimiento-economico-de-la-region-el-2021" class="btn-header">https://elperuano.pe/noticia/103992-moodys-peru-alcanzara-el-mayor-crecimiento-economico-de-la-region-el-2021</a>
+                                            </div>
+                                        </div> 
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/bermuda-business-overview.png" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>El Banco Mundial en Perú</h4>
+                                                <p>Después de una expansión robusta en la década previa, la economía peruana 
+                                                    ingresó a una fase de mayor lentitud. En el 2020, la crisis del COVID-19 tendrá un impacto importante, 
+                                                    aunque se espera una fuerte recuperación el siguiente año.
+                                                </p>
+                                                <p>Infórmate más en:</p>
+                                                <a href="https://www.bancomundial.org/es/country/peru/overview#1" class="btn-header">https://www.bancomundial.org/es/country/peru/overview#1</a>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </article>
+                            </div>
+                            <div class="slider-element">
+                                <article class="element-blue">
+                                    <div class="texto-team1">
+                                        <h4>IMPACTO ECONÓMICO EN PUNO</h4>
+                                    </div>
+                                    <div class="card">
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/puno4.jpeg">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>Abandono de clases</h4>
+                                                <p>Desde implementación de la educación virtual; 20 mil 553 alumnos abandonaron este método 
+                                                    de enseñanza. La cifra representa el 8.08 % de un universo de 254 mil 220 escolares del nivel 
+                                                    inicial, primaria, secundaria y educación básica alternativa.
+                                                </p>
+                                                <p>Obtenido de:</p>
+                                                <a href="https://ladecana.pe/en-puno-20-000-alumnos-dejaron-las-clases-de-aprendo-en-casa/" class="btn-header">https://ladecana.pe/en-puno-20-000-alumnos-dejaron-las-clases-de-aprendo-en-casa/</a>
+                                            </div>
+                                        </div>
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/puno2.jpg" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>Impacto del COVID-19 en el empleo en el Perú</h4>
+                                                <p>El siguiente análisis muestra una radiografía completa de cuáles son los sectores 
+                                                    económicos que se verán más afectados por la pandemia 
+                                                    del COVID-19 en el Perú y una estimación del impacto en los puestos de trabajo que se perderían
+                                                </p>
+                                            </div>
+                                        </div> 
+                                        <div class="content-card">
+                                            <div class="people">
+                                                <img src="img/puno1.jpg" alt="">
+                                            </div>
+                                            <div class="texto-team">
+                                                <h4>Puno</h4>
+                                                <p>
+                                                    Esta región altiplánica reporta 180 casos positivos y solo una víctima mortal por el covid-19. 
+                                                    El Comando Regional Covid-19, en coordinación con el Ejecutivo y los gobiernos locales, ha 
+                                                    logrado un adecuado manejo de la prevención sanitaria.
+                                                </p>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </article>                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slider-arrows">
+                        <label for="element1"></label>
+                        <label for="element2"></label>
+                        <label for="element3"></label>
+                    </div>
+                </section>            
+            </div>
+            <p class="after"> </p>
+        </section>
+        
+        <!------------------SEGUNDO SLIDER - EXPANSIÒN DEL COVID---------------------------------------------->
+
+        <section class="team contenedor" id="covid">
+            <h3>EXPANCIÓN DEL COVID - 19</h3>
+            <p class="after"> </p>
+            <div class="slider">
+                <ul>
+                    <li>
+                        <h4>CUADRO COMPARATIVO DE LAS EXPANCION DEL COVID - 19 EN EL MUNDO</h4>
+                        <img src="img/cuadro comparativo 1.gif" alt=""> 
+                        <p>Obtenido de:</p>
+                        <a href="https://www.who.int/publications/m/item/weekly-epidemiological-update---5-january-2021" class="btn-header">https://gestion.pe/economia/economia-peruana-experimentara-el-mayor-efecto-rebote-en-america-latina-en-el-2021-noticia/?ref=gesr</a>       
+                    </li>
+                    <li>
+                        <h4>EXPANCION DEL COVID - 19 EN MAÈRICA DEL SUR</h4>
+                        <img src="img/PERUEXPA1.jpg" alt=""> 
+                    
+                    </li>
+                    <li>
+                        <h4>EXPANCION DEL COVID - 19 EN EL PERÙ</h4>
+                        <img src="img/perúcovid.png" alt=""> 
+                        <p>Herramienta digital muestra cuadros y proyecciones del COVID-19 en Perú</p>
+                    </li>
+                    <li>
+                        <h4>EXPANCION DEL COVID - 19 EN AREQUIPA</h4>
+                        <img src="img/arequipacovid.png" alt=""> 
+                        <p>De todas las pruebas covid aplicadas la última semana, el 8.3% dio resultado positivo. Resultado que se acerca paulatinamente al arrojado en el mayor auge de contagios en Arequipa</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--------------- VIDEOS RELACIONADOS CON EL CORONAVIRUS ---------------------------------->
+        <section class="about" id="servicio">
+            <div class="contenedor">
+                <h3>IMPACTO ECONÓMICO</h3>
+                <div class="servicios">
+                    <div class="caja-servicios">
+                        <h4>Impacto económico en Perú por COVID-19 en la actualidad</h4>
+                        <p>El economista Melvin Escudero, explicó sobre el impacto económico que tiene el brote del COVID-19 en Perú actualmente.</p>
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/H_4dCTpw0Qk"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caja-servicios">
+                        <h4>¿Puede la economía peruana crecer 10 % en el 2021?</h4>
+                        <p>César Fuentes, director de la Maestría en Gestión Pública de ESAN, analizó en Radio Nacional 
+                            si es posible crecer alrededor de 10 % en la economia en Perú.</p>
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/wz10PKlPyMI"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caja-servicios">
+                        <h4>¿Cómo ha evolucionado el COVID-19 en el Perú?</h4>
+                        <p>¿Primera ola vs Segunda ola? A un año de la pandemia COVID-19, Marco Loret de Mola nos muestra 
+                            las diferencias de crecimiento de ambas etapas.</p>
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/lYN63_zio84"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------- MENÚ DE SITUACION ACTUAL DEL PERÙ ---------------------------------->
+        <section class="work contenedor" id="trabajo">
+            <h3>Situaciòn actual COVID-19 Perù 2020 - 2021</h3>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='resumen'>Resumen</li>
+                    <li class="filter" data-nombre='tasa'>Tasa de ataque</li>
+                    <li class="filter" data-nombre='casos'>Casos positivos</li>
+                    <!--<li class="filter" data-nombre='letalidad'>Letalidad</li>-->
+                </ul>
+            </div>
+            <div class="galeria-work">
+                <div class="cont-work resumen">
+                    <div class="textos-work">
+                        <h4>Resumen de la situacióna ctual del País</h4>
+                    </div>
+                    <div class="img-work">
+                        <img src="img/resumen.png" alt="">
+                    </div>
+                </div>
+                <div class="cont-work tasa">
+                    <div class="textos-work">
+                        <h4>Pirámide poblacional según tasas de ataque de casos confirmados de COVID - 19, Perú 2020-2021</h4>
+                    </div>
+                    <div class="img-work">
+                        <img src="img/piramide.png" alt="">
+                    </div>
+                </div>
+                <div class="cont-work1 casos">
+                    <div class="textos-work">
+                        <h4>Casos posotivos de covid 19 según etapa de vida, Perú 2020 - 2021</h4>
+                    </div>
+                    <div class="img-work">
+                        <img src="img/etapa de vida.png" alt="">
+                    </div>
+                </div>
+                <!--<div class="cont-work2 letalidad">
+                    <div class="textos-work1">
+                        <h4>Letalidad según etapa de vida, Perú 2020 - 2021</h4>
+                    </div>
+                    <div class="img-work">
+                        <img src="img/letalidad.png" alt="">
+                    </div>
+                </div>-->
+            </div>
+        </section>
+    </main>
+
+    <!---------------------- CARRUSEL: VIDEOS DE YOUTUBE ------------------------------------>
+    <footer id="contacto">
+        <h2>Las Noticias mas resaltantes sobre el COVID - 19</h2>
+        <!--<div class="footer contenedor">
+            <div class="marca-logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="iconos">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-github"></i>
+            </div>
+            <p>La pasión e innovación es lo que nos distingue del resto</p>
+        </div>-->
+        <div class="card">
+            <div id="carrusel">
+                <a href="#" class="left-arrow"><img src="img/left-arrow.png" /></a>
+                <a href="#" class="right-arrow"><img src="img/right-arrow.png" /></a>
+                <div class="carrusel">
+                    <div class="product" id="product_0">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/7z0IU7i-xEQ"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_1">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/5wypTycLHL8"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_2">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/4CHanebIMGM"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_3">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/HO6SDR0bYBc"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_4">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/Rl0jxbQ8RCY"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_5">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/x_IFKALdeKc"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_6">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/tCPq2IVM5Mg"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_7">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/9RF0a9vccwA"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_8">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/r95jAHH-D8k"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_9">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/PR-e0e5ayEo"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_10">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/gWlD5x5IU70"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" id="product_11">
+                        <div class="contenedor-caja-video">
+                            <div class="caja-video">
+                                <iframe class="video" src="https://www.youtube.com/embed/hjJ0-nTWnWo"></iframe>
+                            </div>
+                        </div>
+                        <!--<img src="gallery/03.jpg" width="195" height="100" />
+                        <h5>Lorem ipsum 6</h5>
+                        <p>40.00 €</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+</body>
+</html>
